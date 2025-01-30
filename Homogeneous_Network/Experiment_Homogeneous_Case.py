@@ -1,6 +1,6 @@
 from multihop_simulator import *
 
-link_list = [(0, 1), (0, 9), (1, 4), (1, 8), (5, 6), (7, 5), (9, 7), (9, 10), (10, 2), (10, 3)]
+link_list = [(0, 1), (0, 9), (1, 4), (1, 8), (5, 6), (7, 5), (9, 7), (9, 10), (10, 2), (10, 3)]  
 interference_k_hop = 2
 # Network_Type = singlesource 
 Network_Type = multisource
