@@ -727,7 +727,7 @@ class Index_Finder:
         
     def compute_index(self,tau):
 #         tau = self.aoii
-        #tau = self.aoii
+        tau = int(tau)
         atau1 = self._aaoii(tau + 1)
         atau  = self._aaoii(tau)
         dtau1 = self._frac_scheduled(tau + 1)
@@ -739,6 +739,7 @@ class Index_Finder:
             INDX = (atau1 - atau) / (dtau - dtau1)
 
         return INDX
+    
 class Index_Finder_Pre:
     def __init__(self, p_c, hs):
         self.p_c = p_c  # State change probability
@@ -799,7 +800,7 @@ class Index_Finder_Pre:
 
     
     def compute_index(self, tau, psval):
-#         tau = self.aoii
+        tau = int(tau)
         E_T = self.compute_expected_times(psval) #self.simulate_markov_chain(num_simulations=1000)
         E_T = E_T[self.hs-1]
         E_T_squared = self.compute_second_moment_times(psval)

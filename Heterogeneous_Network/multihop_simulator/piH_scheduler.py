@@ -91,10 +91,6 @@ class Thresholdscheduler:
             self.nodedata[n].Abar[n] = 0
             self.nodedata[n].Aflag[n] = 1
                 
-        for (s, j, i) in shts: # if there is a transmission, update A 
-            if self.nodedata[j].Aflag[s] == 0:
-                self.nodedata[j].Abar[s] = (1- self.nodedata[j].pival[s])*(self.nodedata[i].Abar[s] +1) 
-                self.nodedata[j].Aflag[s] = 1
                     
         for n in self.network.G_up.nodes:
             for k in self.network.source_list:
